@@ -41,13 +41,13 @@ colours = ['#3385FF', '#66B2FF']
 triangleP = [A,B,C]
 
 for i in range(5000):
+    coords = midpoint((coords[0], coords[1]), random.choice(triangleP))
     fig.add_trace(go.Scatter(
         x=[coords[0]],
         y=[coords[1]],
         mode='markers',
-        marker=dict(size=5, color=random.choice(colours))
+        marker=dict(size=3, color=random.choice(colours))
     ))
-    coords = midpoint((coords[0], coords[1]), random.choice(triangleP))
 
 fig.update_layout(
     title="Trójkąt Sierpińskiego",
