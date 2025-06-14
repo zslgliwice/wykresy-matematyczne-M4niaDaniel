@@ -41,7 +41,7 @@ colours = ['#3385FF', '#66B2FF']
 triangleP = [A,B,C]
 
 for i in range(5000):
-    coords = midpoint((coords[0], coords[1]), random.choice(triangleP))
+    coords = midpoint(coords, random.choice(triangleP))
     fig.add_trace(go.Scatter(
         x=[coords[0]],
         y=[coords[1]],
